@@ -9,7 +9,7 @@ Inspired by the missing "turn off screen" affordance in the default power contro
 - DankBar icon with 2-second long press
 - Control Center tile with single-click action
 - Optional compositor shortcut, disabled by default
-- Uses DMS display power management through `dms dpms off`
+- Uses DMS compositor display power management
 - Works with the DMS keybind system for supported compositors
 
 ## Installation
@@ -44,7 +44,7 @@ git clone https://github.com/SakuraToErii/DmsScreenOff ~/.config/DankMaterialShe
 
 - DankMaterialShell 1.2.0 or newer
 - `dms` CLI available in `PATH`
-- A compositor/display backend supported by `dms dpms off`
+- A compositor supported by DMS display power management
 
 ## Configuration
 
@@ -53,11 +53,7 @@ Settings available in plugin settings:
 - **Provider**: DMS keybind provider used for optional shortcut management (default: `niri`)
 - **Shortcut**: Optional DMS keybind. Default is empty, so no plugin-managed shortcut is created.
 
-When a shortcut is configured, the plugin writes a DMS keybind with this action:
-
-```sh
-spawn dms dpms off
-```
+When a shortcut is configured, the plugin writes a provider-specific DMS keybind action.
 
 Clearing the shortcut removes the last keybind managed by this plugin.
 

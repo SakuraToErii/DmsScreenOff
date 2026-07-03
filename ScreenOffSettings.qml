@@ -49,6 +49,7 @@ PluginSettings {
     }
 
     function runSetShortcut(provider, shortcut) {
+        const action = provider === "niri" ? "power-off-monitors" : (provider === "hyprland" ? "dpms off" : "spawn dms dpms off");
         pendingShortcut = shortcut;
         setShortcutProcess.command = [
             "dms",
@@ -56,7 +57,7 @@ PluginSettings {
             "set",
             provider,
             shortcut,
-            "spawn dms dpms off",
+            action,
             "--desc",
             "Screen Off"
         ];

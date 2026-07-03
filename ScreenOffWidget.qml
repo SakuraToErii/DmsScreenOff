@@ -1,6 +1,6 @@
 import QtQuick
-import Quickshell.Io
 import qs.Common
+import qs.Services
 import qs.Widgets
 import qs.Modules.Plugins
 
@@ -8,16 +8,8 @@ PluginComponent {
     id: root
 
     function turnScreenOff() {
-        if (dpmsOffProcess.running) {
-            dpmsOffProcess.running = false;
-        }
-        dpmsOffProcess.running = true;
-    }
-
-    Process {
-        id: dpmsOffProcess
-        command: ["dms", "dpms", "off"]
-        running: false
+        console.info("ScreenOff: power off monitors requested");
+        CompositorService.powerOffMonitors();
     }
 
     ccWidgetIcon: "desktop_access_disabled"
