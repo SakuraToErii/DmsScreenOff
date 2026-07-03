@@ -5,7 +5,7 @@
   "category": "utilities",
   "repo": "https://github.com/SakuraToErii/DmsScreenOff",
   "author": "Ordis",
-  "description": "Turn off monitors from DankBar with a long press or optional shortcut.",
+  "description": "Turn off monitors.",
   "requires_dms": ">=1.2.0",
   "dependencies": ["dms"],
   "compositors": ["niri", "hyprland"],

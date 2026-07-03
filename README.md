@@ -1,14 +1,13 @@
 # DMS Screen Off
 
-Screen Off is a tiny DankBar widget for [DankMaterialShell](https://danklinux.com/) that turns off all monitors.
+Screen Off is a tiny [DankMaterialShell](https://danklinux.com/) plugin that turns off monitors.
 
 Inspired by the missing "turn off screen" affordance in the default power controls.
 
 ## Features
 
-- DankBar widget with a display-off icon
-- Control Center widget with expandable long-press action
-- Long press for 2 seconds to turn off monitors
+- DankBar icon with 2-second long press
+- Control Center tile with single-click action
 - Optional compositor shortcut, disabled by default
 - Uses DMS display power management through `dms dpms off`
 - Works with the DMS keybind system for supported compositors
@@ -68,7 +67,11 @@ Bar widget shows:
 
 - A `desktop_access_disabled` Material Symbols icon
 
-Long press the widget for 2 seconds to turn off all monitors. Press any key or move the mouse to wake the display again.
+DankBar: long press the widget for 2 seconds.
+
+Control Center: click the tile.
+
+Press any key or move the mouse to wake the display again.
 
 ## About
 

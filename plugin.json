@@ -1,7 +1,7 @@
 {
     "id": "screenOff",
     "name": "Screen Off",
-    "description": "Turn off monitors from the DankBar with a long press or optional shortcut.",
+    "description": "Turn off monitors.",
     "version": "1.0.0",
     "author": "Ordis",
     "type": "widget",
