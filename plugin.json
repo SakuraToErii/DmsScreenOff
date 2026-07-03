@@ -1,0 +1,15 @@
+{
+    "id": "screenOff",
+    "name": "Screen Off",
+    "description": "Turn off monitors from the DankBar with a long press or optional shortcut.",
+    "version": "1.0.0",
+    "author": "Ordis",
+    "type": "widget",
+    "capabilities": ["dankbar-widget", "display-power"],
+    "component": "./ScreenOffWidget.qml",
+    "icon": "desktop_access_disabled",
+    "settings": "./ScreenOffSettings.qml",
+    "requires_dms": ">=1.2.0",
+    "requires": ["dms"],
+    "permissions": ["settings_read", "settings_write", "process"]
+}

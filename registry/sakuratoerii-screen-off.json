@@ -1,0 +1,13 @@
+{
+  "id": "screenOff",
+  "name": "Screen Off",
+  "capabilities": ["dankbar-widget"],
+  "category": "utilities",
+  "repo": "https://github.com/SakuraToErii/DmsScreenOff",
+  "author": "Ordis",
+  "description": "Turn off monitors from DankBar with a long press or optional shortcut.",
+  "requires_dms": ">=1.2.0",
+  "dependencies": ["dms"],
+  "compositors": ["niri", "hyprland"],
+  "distro": ["any"]
+}
