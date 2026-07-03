@@ -1,7 +1,7 @@
 {
   "id": "screenOff",
   "name": "Screen Off",
-  "capabilities": ["dankbar-widget"],
+  "capabilities": ["dankbar-widget", "control-center-widget"],
   "category": "utilities",
   "repo": "https://github.com/SakuraToErii/DmsScreenOff",
   "author": "Ordis",

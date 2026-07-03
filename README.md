@@ -7,6 +7,7 @@ Inspired by the missing "turn off screen" affordance in the default power contro
 ## Features
 
 - DankBar widget with a display-off icon
+- Control Center widget with expandable long-press action
 - Long press for 2 seconds to turn off monitors
 - Optional compositor shortcut, disabled by default
 - Uses DMS display power management through `dms dpms off`

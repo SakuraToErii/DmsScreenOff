@@ -5,7 +5,7 @@
     "version": "1.0.0",
     "author": "Ordis",
     "type": "widget",
-    "capabilities": ["dankbar-widget", "display-power"],
+    "capabilities": ["dankbar-widget", "control-center-widget", "display-power"],
     "component": "./ScreenOffWidget.qml",
     "icon": "desktop_access_disabled",
     "settings": "./ScreenOffSettings.qml",

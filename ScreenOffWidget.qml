@@ -20,6 +20,12 @@ PluginComponent {
         running: false
     }
 
+    ccWidgetIcon: "desktop_access_disabled"
+    ccWidgetPrimaryText: "Screen Off"
+    ccWidgetSecondaryText: "Display power"
+    ccWidgetIsToggle: false
+    ccDetailHeight: 96
+
     Component {
         id: longPressPill
 
@@ -76,6 +82,88 @@ PluginComponent {
                     if (holdMouseArea.pressed) {
                         pill.holding = false;
                         holdTimer.stop();
+                    }
+                }
+            }
+        }
+    }
+
+    ccDetailContent: Component {
+        Rectangle {
+            id: detailRoot
+            implicitHeight: 88
+            radius: Theme.cornerRadius
+            color: Theme.surfaceContainerHigh
+            border.width: 0
+
+            property bool holding: false
+
+            Timer {
+                id: detailHoldTimer
+                interval: 2000
+                repeat: false
+                onTriggered: {
+                    detailRoot.holding = false;
+                    root.turnScreenOff();
+                }
+            }
+
+            Rectangle {
+                id: holdButton
+                anchors.fill: parent
+                anchors.margins: Theme.spacingM
+                radius: Theme.cornerRadius
+                color: detailRoot.holding ? Theme.primary : Theme.surfaceContainer
+                border.color: detailRoot.holding ? Theme.primary : Theme.outlineMedium
+                border.width: Theme.layerOutlineWidth
+
+                Row {
+                    anchors.centerIn: parent
+                    spacing: Theme.spacingM
+
+                    DankIcon {
+                        name: "desktop_access_disabled"
+                        size: Theme.iconSize
+                        color: detailRoot.holding ? Theme.primaryText : Theme.surfaceText
+                        anchors.verticalCenter: parent.verticalCenter
+                    }
+
+                    StyledText {
+                        text: "Screen Off"
+                        font.pixelSize: Theme.fontSizeMedium
+                        font.weight: Font.Medium
+                        color: detailRoot.holding ? Theme.primaryText : Theme.surfaceText
+                        anchors.verticalCenter: parent.verticalCenter
+                    }
+                }
+
+                MouseArea {
+                    id: detailHoldMouseArea
+                    anchors.fill: parent
+                    acceptedButtons: Qt.LeftButton
+                    cursorShape: Qt.PointingHandCursor
+                    hoverEnabled: true
+
+                    onPressed: {
+                        detailRoot.holding = true;
+                        detailHoldTimer.restart();
+                    }
+
+                    onReleased: {
+                        detailRoot.holding = false;
+                        detailHoldTimer.stop();
+                    }
+
+                    onCanceled: {
+                        detailRoot.holding = false;
+                        detailHoldTimer.stop();
+                    }
+
+                    onExited: {
+                        if (detailHoldMouseArea.pressed) {
+                            detailRoot.holding = false;
+                            detailHoldTimer.stop();
+                        }
                     }
                 }
             }
