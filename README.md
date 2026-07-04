@@ -8,8 +8,6 @@ Inspired by the missing "turn off screen" affordance in the default power contro
 
 ![Control Center tile](assets/control-center.png)
 
-![DankBar icon](assets/dankbar.png)
-
 ## Features
 
 - DankBar icon with 2-second long press countdown
