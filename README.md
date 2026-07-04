@@ -4,7 +4,9 @@ Screen Off is a tiny [DankMaterialShell](https://danklinux.com/) plugin that tur
 
 Inspired by the missing "turn off screen" affordance in the default power controls.
 
-![Control Center tile](assets/screenshot.png)
+![DankBar countdown](assets/screenshot.png)
+
+![Control Center tile](assets/control-center.png)
 
 ![DankBar icon](assets/dankbar.png)
 
