@@ -4,9 +4,13 @@ Screen Off is a tiny [DankMaterialShell](https://danklinux.com/) plugin that tur
 
 Inspired by the missing "turn off screen" affordance in the default power controls.
 
+![Control Center tile](assets/screenshot.png)
+
+![DankBar icon](assets/dankbar.png)
+
 ## Features
 
-- DankBar icon with 2-second long press
+- DankBar icon with 2-second long press countdown
 - Control Center tile with single-click action
 - Optional compositor shortcut, disabled by default
 - Uses DMS compositor display power management
@@ -59,11 +63,11 @@ Clearing the shortcut removes the last keybind managed by this plugin.
 
 ## Usage
 
-Bar widget shows:
+Add Screen Off from Settings -> Control Center -> Add Widget to use it from Control Center.
 
-- A `desktop_access_disabled` Material Symbols icon
+Add Screen Off from Settings -> DankBar -> Widgets to use it from DankBar.
 
-DankBar: long press the widget for 2 seconds.
+DankBar: long press the icon for 2 seconds. The icon shows a `2`, then `1`, then powers off monitors.
 
 Control Center: click the tile.
 
